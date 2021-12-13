@@ -50,11 +50,8 @@ front-end.
 **Design Patterns:**
 
 | • | > Factory Pattern.   |
-| :----------------------: |
 | • | > Prototype Pattern. |
-| :----------------------: |
 | • | > Builder Pattern.   |
-| :----------------------: |
 | • | > Bridge Pattern.    |
 
 - We combined **Factory** pattern and **Builder** pattern to make it easy to make the
