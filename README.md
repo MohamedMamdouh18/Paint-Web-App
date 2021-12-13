@@ -19,7 +19,7 @@
     - [Packages-and-Running](#Packages-and-Running)
 - [Design-Patterns-and-UML-Class-Diagram](#Design-Patterns-and-UML-Class-Diagram)
     - [Design-Patterns](#Design-Patterns)
-    - [UML-Class-Diagram](#UML-Class-Diagram)
+    - [UML Class Diagram](#UML-Class-Diagram)
 - [Design-Decisions](#Design-Decisions)
 - [Features-and-User-Guide](#Features-and-User-Guide)
     - [Features](#Features)
@@ -67,7 +67,7 @@
 - **Bridge Pattern:** Used by making only two directors for all shapes without it, it would take us 10 directors for all shapes.
 
 
-**UML-Class-Diagram**
+## UML Class Diagram
 ![image](https://drive.google.com/uc?export=view&id=1FNfirG_4PP2ixCLCmzqIT9UKTTttJtUG)
 
 
