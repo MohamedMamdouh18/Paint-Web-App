@@ -67,7 +67,7 @@
 - **Bridge Pattern:** Used by making only two directors for all shapes without it, it would take us 10 directors for all shapes.
 
 
-**UML Class Diagram**
+**UML-Class-Diagram**
 ![image](https://drive.google.com/uc?export=view&id=1FNfirG_4PP2ixCLCmzqIT9UKTTttJtUG)
 
 
