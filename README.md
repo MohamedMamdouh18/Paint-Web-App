@@ -14,17 +14,17 @@
 
 ## Table of Contents
 
-- [Setup](#Setup)
-  - [Ports](#Ports)
-  - [Packages-and-Running](#Packages-and-Running)
+- [Setup](#1. Setup)
+    - [Ports](#Ports)
+    - [Packages-and-Running](#Packages-and-Running)
 - [Design-Patterns-and-UML-Class-Diagram](#Design-Patterns-and-UML-Class-Diagram)
-  - [Design-Patterns](#Design-Patterns)
-  - [UML-Class-Diagram](#UML-Class-Diagram)
+    - [Design-Patterns](#Design-Patterns)
+    - [UML-Class-Diagram](#UML-Class-Diagram)
 - [Design-Decision](#Design-Decision)
 - [Features-and-User-Guide](#Features-and-User-Guide)
-  - [Features](#Features)
-  - [User-Guide](#User-Guide)
-  - [UI-Samples](#UI-Samples)
+    - [Features](#Features)
+    - [User-Guide](#User-Guide)
+    - [UI-Samples](#UI-Samples)
 
 ## 1. Setup
 
@@ -34,10 +34,10 @@
 >
 > -  The Front end is listening on port 4200.
 
-###1.2. Packages and Running
+### 1.2. Packages and Running
 
 - To install packages, write "npm install" in the terminal for the
-front-end.
+  front-end.
 
 - Add [gson-2.8.9.jar](https://mvnrepository.com/artifact/com.google.code.gson/gson/2.8.9), [java-json.jar](https://jar-download.com/artifacts/org.json), [openijfx-17.0.1](https://gluonhq.com/products/javafx/) packages for the backend.
 
@@ -55,10 +55,10 @@ front-end.
 | Bridge Pattern     |
 
 - We combined **Factory** pattern and **Builder** pattern to make it easy to make the
-shapeInter object and konva shape which will be rendered on screen by generating both from the same object.
+  shapeInter object and konva shape which will be rendered on screen by generating both from the same object.
 
 - Using **Factory** and **Builder** patterns, If the user wants the default shape which will be created from pressing any button of shapes' buttons in the GUI simply it will call the
-default director which will call the builder of the specific shape that the user asked for. The builder will make a konva shape object and ShapeInter object which the director will return to the user when asked. The user will get the specific shape by calling the director function of shape to create it only.
+  default director which will call the builder of the specific shape that the user asked for. The builder will make a konva shape object and ShapeInter object which the director will return to the user when asked. The user will get the specific shape by calling the director function of shape to create it only.
 
 - In this way, the user doesn't know about the builder classes or the ShapeInter concrete classes.
 
@@ -147,16 +147,16 @@ public class Utility {
 **ObjectsStates**: maps ids of shapes to states of shapes. **History_u stack**: Keeps track of ids of created and modified shapes. **History_r stack**: Keeps track of states that was popped from history_u stack due to undo.
 
 - Each key in the **objectsStates** map has 2 values:
-  - undo_stack: keeps track of the states of the shape.
-  - redo_stack: keeps track of the states popped from undo_stack due to undo.
+    - undo_stack: keeps track of the states of the shape.
+    - redo_stack: keeps track of the states popped from undo_stack due to undo.
 
 - When a shape is created:
-  - Its id is added to **objectsStates** map, and its null value is pushed to undo_stack, then the object passed from the frontend is pushed to undo_stack, the id of the shape is passed to history_u.
+    - Its id is added to **objectsStates** map, and its null value is pushed to undo_stack, then the object passed from the frontend is pushed to undo_stack, the id of the shape is passed to history_u.
 
 ![image](https://drive.google.com/uc?export=view&id=1UwZhBrLLsD8qufWJuUhpoHqlxqfDvdzw)
 
 - When a shape is modified:
-  - A new state is pushed to undo_stack, its id is passed to history_u.
+    - A new state is pushed to undo_stack, its id is passed to history_u.
 
 ![image](https://drive.google.com/uc?export=view&id=1Tjin7lqksQ3kiuda-08mcv_SDmUN4dcJ)
 
@@ -168,7 +168,7 @@ public class Utility {
 
 - On redo:
 
-  - The top of redo_stack is pushed to undo_stack.
+    - The top of redo_stack is pushed to undo_stack.
 
 ![image](https://drive.google.com/uc?export=view&id=1nVSTblWTz5NbHMCm15RPCBCCFd5S6gTt)
 
@@ -180,14 +180,14 @@ public class Utility {
 
 - Drawing Tools:
 
-  - Selection Tool.
-  - Free Hand Drawing "**Brush**".
-  - A Variety of Shapes.
-  - Save and Load for the items on the screen.
-  - Undo and Redo.
-  - Delete Selected items.
-  - Colour Palette.
-  - Settings for All Shapes.
+    - Selection Tool.
+    - Free Hand Drawing "**Brush**".
+    - A Variety of Shapes.
+    - Save and Load for the items on the screen.
+    - Undo and Redo.
+    - Delete Selected items.
+    - Colour Palette.
+    - Settings for All Shapes.
 
 ### 4.2. User Guide
 
@@ -203,36 +203,36 @@ public class Utility {
 
 - Toolbar Tools:
 
-  - **Selection Tool:** This opens the selection option so that the shapes can be selected using the selection box. By holding the left click, and moving which shows up a rectangle to help you specify which shapes will be selected if it drops into this rectangle, or by clicking on the wanted shape.
+    - **Selection Tool:** This opens the selection option so that the shapes can be selected using the selection box. By holding the left click, and moving which shows up a rectangle to help you specify which shapes will be selected if it drops into this rectangle, or by clicking on the wanted shape.
 
-  - **Paint Tool:** This allows you to use the brush to have some free drawings on the canvas also you can change the colour of these drawings after you finish then select this shape and change the stroke colour from the settings.
+    - **Paint Tool:** This allows you to use the brush to have some free drawings on the canvas also you can change the colour of these drawings after you finish then select this shape and change the stroke colour from the settings.
 
-  - **Shapes Box Tool:** This has a variety of shapes that drops into the canvas by just clicking on it there is a fancy way that will be discussed later.
-  - **Save and Load:** This saves the items on the canvas in two ways depending on which you choose either JSON or XML. Load loads the specified file either JSON or XML and deletes all the items that were on the canvas then add these shapes. In both, there is a file picker that opens to select the place and the file name to save and to select the file that will be loaded.
-  - **Undo and Redo:** Undo movements or redo it again.
-  - **Delete:** which deletes the selected shapes.
+    - **Shapes Box Tool:** This has a variety of shapes that drops into the canvas by just clicking on it there is a fancy way that will be discussed later.
+    - **Save and Load:** This saves the items on the canvas in two ways depending on which you choose either JSON or XML. Load loads the specified file either JSON or XML and deletes all the items that were on the canvas then add these shapes. In both, there is a file picker that opens to select the place and the file name to save and to select the file that will be loaded.
+    - **Undo and Redo:** Undo movements or redo it again.
+    - **Delete:** which deletes the selected shapes.
 
-  - **Context Menu:** This one is the menu that drops after right-clicking on the canvas which allows you to copy or delete the selected shapes, and pastes the copied shapes where you want.
+    - **Context Menu:** This one is the menu that drops after right-clicking on the canvas which allows you to copy or delete the selected shapes, and pastes the copied shapes where you want.
 
-  - **The HotKeys:**
+    - **The HotKeys:**
 
-    - > "**V**" key select the selection tool.
-    - > "**P**" key select the paint tool.
-    - > "**S**" key drops a square into the canvas.
-    - > "**T**" key drops a triangle into the canvas.
-    - > "**R**" key drops a rectangle into the canvas.
-    - > "**E**" key drops an ellipse into the canvas.
-    - > "**C**" key drops a circle into the canvas.
-    - > "**G**" key drops a pentagon into the canvas.
-    - > "**H**" key drops a hexagon into the canvas.
-    - > "**I**" key drops a line segment into the canvas.
-    - > "**Control + Z**" key undo one move.
-    - > "**Control + Shift + Z**" or "**Control + Y**"key redo one move.
-    - > "**Control+A**" key selects all the shapes on the canvas.
-    - > "**Control+C**" key copies the selected shapes to the clipboard.
-    - > "**Control+V**" key pastes the copied shapes to the canvas where the pointer is.
-    - > "**Control+S**" key saves all the shapes on the canvas to the specified file.
-    - > "**L**" key loads the shapes from the chosen file.
+        - > "**V**" key select the selection tool.
+        - > "**P**" key select the paint tool.
+        - > "**S**" key drops a square into the canvas.
+        - > "**T**" key drops a triangle into the canvas.
+        - > "**R**" key drops a rectangle into the canvas.
+        - > "**E**" key drops an ellipse into the canvas.
+        - > "**C**" key drops a circle into the canvas.
+        - > "**G**" key drops a pentagon into the canvas.
+        - > "**H**" key drops a hexagon into the canvas.
+        - > "**I**" key drops a line segment into the canvas.
+        - > "**Control + Z**" key undo one move.
+        - > "**Control + Shift + Z**" or "**Control + Y**"key redo one move.
+        - > "**Control+A**" key selects all the shapes on the canvas.
+        - > "**Control+C**" key copies the selected shapes to the clipboard.
+        - > "**Control+V**" key pastes the copied shapes to the canvas where the pointer is.
+        - > "**Control+S**" key saves all the shapes on the canvas to the specified file.
+        - > "**L**" key loads the shapes from the chosen file.
 
 ### 4.3. UI Samples
 
