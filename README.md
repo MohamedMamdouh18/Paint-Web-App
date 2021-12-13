@@ -14,7 +14,7 @@
 
 ## Table of Contents
 
-- [1. Setup](#Setup)
+- [Setup](#Setup)
     - [Ports](#Ports)
     - [Packages-and-Running](#Packages-and-Running)
 - [Design-Patterns-and-UML-Class-Diagram](#Design-Patterns-and-UML-Class-Diagram)
@@ -26,15 +26,15 @@
     - [User-Guide](#User-Guide)
     - [UI-Samples](#UI-Samples)
 
-## 1. Setup
+## Setup
 
-### 1.1. Ports
+### Ports
 
 > -  The Back end is listening on port 8080.
 >
 > -  The Front end is listening on port 4200.
 
-### 1.2. Packages and Running
+### Packages and Running
 
 - To install packages, write "npm install" in the terminal for the
   front-end.
@@ -43,9 +43,9 @@
 
 - To run the front write in the terminal `ng serve`.
 
-## 2. Design Pattern and UML Class Diagram
+## Design Pattern and UML Class Diagram
 
-### 2.1. Design Patterns
+### Design Patterns
 
 | **Design Patterns**|
 | :----------------: |
@@ -73,7 +73,7 @@
 
 ![image](https://drive.google.com/uc?export=view&id=1rQwDJbuPXC3AMzaRZDFlkV75RpCJlh4j)
 
-## 3. Design Decisions
+## Design Decisions
 - To log the requests in back-end, AspectJ Logged before and after each method.
 
 > Before : restart -> Clear All Stored Data\
@@ -172,9 +172,9 @@ public class Utility {
 
 ![image](https://drive.google.com/uc?export=view&id=1nVSTblWTz5NbHMCm15RPCBCCFd5S6gTt)
 
-## 4. Features and User Guide
+## Features and User Guide
 
-### 4.1. Features
+### Features
 
 - A friendly Paint Web App with a friendly UI that helps the user with some Hotkeys and Shortcuts.
 
@@ -189,7 +189,7 @@ public class Utility {
     - Colour Palette.
     - Settings for All Shapes.
 
-### 4.2. User Guide
+### User Guide
 
 - In the beginning, The default tool is the selection tool, then from the toolbar at the bottom of the screen, there are various tools to use it.
 
@@ -234,7 +234,7 @@ public class Utility {
         - > "**Control+S**" key saves all the shapes on the canvas to the specified file.
         - > "**L**" key loads the shapes from the chosen file.
 
-### 4.3. UI Samples
+### UI Samples
 
 - Full Program.
 
