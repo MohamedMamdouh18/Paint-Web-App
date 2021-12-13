@@ -14,7 +14,7 @@
 
 ## Table of Contents
 
-- [Setup](#1. Setup)
+- [Setup](#1.-Setup)
     - [Ports](#Ports)
     - [Packages-and-Running](#Packages-and-Running)
 - [Design-Patterns-and-UML-Class-Diagram](#Design-Patterns-and-UML-Class-Diagram)
