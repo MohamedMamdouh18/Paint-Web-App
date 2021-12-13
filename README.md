@@ -16,15 +16,15 @@
 
 - [Setup](#Setup)
     - [Ports](#Ports)
-    - [Packages-and-Running](#Packages-and-Running)
-- [Design-Patterns-and-UML-Class-Diagram](#Design-Patterns-and-UML-Class-Diagram)
-    - [Design-Patterns](#Design-Patterns)
+    - [Packages and Running](#Packages-and-Running)
+- [Design Patterns and UML Class Diagram](#Design-Patterns-and-UML-Class-Diagram)
+    - [Design Patterns](#Design-Patterns)
     - [UML Class Diagram](#UML-Class-Diagram)
-- [Design-Decisions](#Design-Decisions)
-- [Features-and-User-Guide](#Features-and-User-Guide)
+- [Design Decisions](#Design-Decisions)
+- [Features and User Guide](#Features-and-User-Guide)
     - [Features](#Features)
-    - [User-Guide](#User-Guide)
-    - [UI-Samples](#UI-Samples)
+    - [User Guide](#User-Guide)
+    - [UI Samples](#UI-Samples)
 
 ## Setup
 
@@ -69,9 +69,6 @@
 
 ## UML Class Diagram
 ![image](https://drive.google.com/uc?export=view&id=1FNfirG_4PP2ixCLCmzqIT9UKTTttJtUG)
-
-
-![image](https://drive.google.com/uc?export=view&id=1rQwDJbuPXC3AMzaRZDFlkV75RpCJlh4j)
 
 ## Design Decisions
 - To log the requests in back-end, AspectJ Logged before and after each method.
