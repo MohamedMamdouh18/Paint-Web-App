@@ -17,7 +17,7 @@
 - [Setup](#Setup)
     - [Ports](#Ports)
     - [Packages-and-Running](#Packages-and-Running)
-- [Design Patterns and UML Class Diagram](#Design-Patterns-and-UML-Class-Diagram)
+- [Design-Patterns-and-UML-Class-Diagram](#Design-Patterns-and-UML-Class-Diagram)
     - [Design-Patterns](#Design-Patterns)
     - [UML-Class-Diagram](#UML-Class-Diagram)
 - [Design-Decision](#Design-Decision)
@@ -43,7 +43,7 @@
 
 - To run the front write in the terminal `ng serve`.
 
-## Design Pattern and UML Class Diagram
+## Design-Patterns-and-UML-Class-Diagram
 
 ### Design Patterns
 
