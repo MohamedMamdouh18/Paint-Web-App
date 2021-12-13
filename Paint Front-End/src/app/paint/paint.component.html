@@ -1,0 +1,148 @@
+<div (contextmenu)="onRightClick($event)" (click)="SelectorType()" id="canvas" width="1400px" height="774px">
+</div>
+<div id="contextMenu" class="context-menu"
+     [ngStyle]="{'left.px': contextmenuX, 'top.px': contextmenuY, 'display': contextmenu}">
+  <ul class="menu">
+    <li class="copy" (click)="copy()">
+      <p>
+        <fa-icon [icon]="faCopy"></fa-icon>
+        Copy
+      </p>
+    </li>
+    <li class="paste" (click)="paste()">
+      <p>
+        <fa-icon [icon]="faPaste"></fa-icon>
+        Paste
+      </p>
+    </li>
+    <li class="trash" (click)="delete()">
+      <p>
+        <fa-icon [icon]="faTrashAlt"></fa-icon>
+        Delete
+      </p>
+    </li>
+  </ul>
+</div>
+<div id="control">
+  <div class="container">
+    <div class="control-box">
+      <div class="control-header">Toolkit</div>
+      <div id="tools" class="control-inner">
+        <div class="tool selected" id="select" (click)="freeDrawingMode = false">
+          <fa-icon [icon]="faMousePointer"></fa-icon>
+          <h2>Select</h2>
+        </div>
+        <div class="tool selected" id="paint" (click)="freeDrawingMode = true">
+          <fa-icon [icon]="faPaintBrush"></fa-icon>
+          <h2>paint</h2>
+        </div>
+        <div class="tool to" id="shapes">
+          <mat-grid-list cols="4" rowHeight="1:0.9">
+            <mat-grid-tile (click)="square()">
+              &#9723;
+            </mat-grid-tile>
+            <mat-grid-tile (click)="rect()">
+              &#9645;
+            </mat-grid-tile>
+            <mat-grid-tile (click)="hexagon()">
+              &#11041;
+            </mat-grid-tile>
+            <mat-grid-tile (click)="pentagon()">
+              &#11040;
+            </mat-grid-tile>
+            <mat-grid-tile (click)="circle()">
+              &#9711;
+            </mat-grid-tile>
+            <mat-grid-tile (click)="ellipse()">
+              &#11053;
+            </mat-grid-tile>
+            <mat-grid-tile (click)="triangle()">
+              &#9651;
+            </mat-grid-tile>
+            <mat-grid-tile (click)="lineSegment()">
+              &#10189;
+            </mat-grid-tile>
+          </mat-grid-list>
+        </div>
+        <div class="tool" id="save" (click)="save()">
+          <fa-icon [icon]="faSave"></fa-icon>
+          <h2>Save</h2>
+        </div>
+        <div class="tool" id="load" (click)="load()">
+          <fa-icon [icon]="faUpload"></fa-icon>
+          <h2>Load</h2>
+        </div>
+        <div class="tool" id="undo" (click)="undo()">
+          <fa-icon [icon]="faUndoAlt"></fa-icon>
+          <h2>Undo</h2>
+        </div>
+        <div class="tool" id="redo" (click)="redo()">
+          <fa-icon [icon]="faRedoAlt"></fa-icon>
+          <h2>Redo</h2>
+        </div>
+        <div class="tool" id="delete" (click)="delete()">
+          <fa-icon [icon]="faTrash"></fa-icon>
+          <h2>Delete</h2>
+        </div>
+      </div>
+    </div><!--
+     -->
+    <div class="control-box brush">
+      <div class="control-header">Settings</div>
+      <div class="brush">
+        <div class="control-inner2">
+          <div class="control-header" [ngStyle]="{'display': DisabledSettings.rectangular}"
+               style="margin-top:10px!important">Width
+          </div>
+          <input id="Width" type="text" [ngStyle]="{'display': DisabledSettings.rectangular}" value="5"
+                 [(ngModel)]="OurSettings.width"
+                 (keydown.enter)="DimensionsUpdater.OnTyping(tr , Shapes , OurSettings, PaintService)"/>
+          <div class="control-header" [ngStyle]="{'display': DisabledSettings.rectangular}"
+               style="margin-top:10px!important">Height
+          </div>
+          <input id="Height" type="text" [ngStyle]="{'display': DisabledSettings.rectangular}" value="5"
+                 [(ngModel)]="OurSettings.height"
+                 (keydown.enter)="DimensionsUpdater.OnTyping(tr , Shapes , OurSettings, PaintService)"/>
+          <div class="control-header" [ngStyle]="{'display': DisabledSettings.CirclePolygon}"
+               style="margin-top:10px!important">Radius
+          </div>
+          <input id="Radius" type="text" [ngStyle]="{'display': DisabledSettings.CirclePolygon}" value=100
+                 [(ngModel)]="OurSettings.circlePolygonRadius"
+                 (keydown.enter)="DimensionsUpdater.OnTyping(tr , Shapes , OurSettings, PaintService)"/>
+          <div class="control-header" [ngStyle]="{'display': DisabledSettings.radXY}" style="margin-top:10px!important">
+            Radius X
+          </div>
+          <input id="RadiusX" type="text" [ngStyle]="{'display': DisabledSettings.radXY}" value=100
+                 [(ngModel)]="OurSettings.radiusX"
+                 (keydown.enter)="DimensionsUpdater.OnTyping(tr , Shapes , OurSettings, PaintService)"/>
+          <div class="control-header" [ngStyle]="{'display': DisabledSettings.radXY}" style="margin-top:10px!important">
+            Radius Y
+          </div>
+          <input id="RadiusY" type="text" [ngStyle]="{'display': DisabledSettings.radXY}" value=50
+                 [(ngModel)]="OurSettings.radiusY"
+                 (keydown.enter)="DimensionsUpdater.OnTyping(tr , Shapes , OurSettings, PaintService)"/>
+          <div class="control-header" style="margin-top:10px!important">Color</div>
+          <input id="color" type="text" value="#ff0000" [(ngModel)]="OurSettings.FillColour"
+                 (keydown.enter)="UpdateDesign('key')"/>
+          <div class="control-header" style="margin-top:10px!important">Stroke</div>
+          <input id="stroke" type="text" value=0 [(ngModel)]="OurSettings.StrokeThickness"
+                 (keydown.enter)="UpdateDesign('key')"/>
+          <div class="control-header" style="margin-top:10px!important">Stroke Color</div>
+          <input id="stroke-color" type="text" value="#ff0000" [(ngModel)]="OurSettings.StrokeColor"
+                 (keydown.enter)="UpdateDesign('key')"/>
+        </div>
+      </div>
+    </div><!--
+     -->
+    <div class="control-box palette">
+      <div class="control-header">Palette</div>
+      <div id="paints" class="control-inner2">
+        <div class="tool to" [(colorPicker)]="PaletteColor"
+             [cpPosition]="'bottom-right'"
+             [style.background]="PaletteColor" (colorPickerChange)="UpdateDesign('picker')" (colorPickerClose)="UpdateDesign('pickerclose')">
+          <fa-icon [icon]="faPalette"></fa-icon>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
