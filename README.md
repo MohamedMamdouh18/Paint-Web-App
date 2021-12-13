@@ -17,7 +17,7 @@
 - [Setup](#Setup)
     - [Ports](#Ports)
     - [Packages-and-Running](#Packages-and-Running)
-- [Design-Patterns-and-UML-Class-Diagram](#Design-Patterns-and-UML-Class-Diagram)
+- [Design Patterns and UML Class Diagram](#Design-Patterns-and-UML-Class-Diagram)
     - [Design-Patterns](#Design-Patterns)
     - [UML-Class-Diagram](#UML-Class-Diagram)
 - [Design-Decision](#Design-Decision)
