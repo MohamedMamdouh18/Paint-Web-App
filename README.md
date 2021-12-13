@@ -26,7 +26,7 @@
     - [User-Guide](#User-Guide)
     - [UI-Samples](#UI-Samples)
 
-## 1. Setup
+## 1.-Setup
 
 ### 1.1. Ports
 
