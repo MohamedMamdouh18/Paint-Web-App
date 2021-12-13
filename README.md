@@ -1,9 +1,9 @@
-#***<span style="color:#FFC800">Pa</span><span style="color:#1B268F">int</span>***
+# ***<span style="color:#FFC800">Pa</span><span style="color:#1B268F">int</span>***
 
 - This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.12, and Spring Boot version 2.5.7 [Spring Boot](https://start.spring.io/).
 
 
-##Authors:
+## Authors:
 > **Youssef Ali Bazina**
 >
 > **Mohamed Mamdouh Rashad**
@@ -49,15 +49,13 @@ front-end.
 
 **Design Patterns:**
 
-+---+----------------------+
 | • | > Factory Pattern.   |
-+===+======================+
+| :----------------------: |
 | • | > Prototype Pattern. |
-+---+----------------------+
+| :----------------------: |
 | • | > Builder Pattern.   |
-+---+----------------------+
+| :----------------------: |
 | • | > Bridge Pattern.    |
-+---+----------------------+
 
 - We combined **Factory** pattern and **Builder** pattern to make it easy to make the
 shapeInter object and konva shape which will be rendered on screen by generating both from the same object.
