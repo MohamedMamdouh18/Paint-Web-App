@@ -47,12 +47,12 @@ front-end.
 
 ###2.1. Design Patterns
 
-**Design Patterns:**
-
-| Factory Pattern   |
-| Prototype Pattern |
-| Builder Pattern   |
-| Bridge Pattern    |
+| **Design Patterns**|
+| :----------------: |
+| Factory Pattern    |
+| Prototype Pattern  |
+| Builder Pattern    |
+| Bridge Pattern     |
 
 - We combined **Factory** pattern and **Builder** pattern to make it easy to make the
 shapeInter object and konva shape which will be rendered on screen by generating both from the same object.
